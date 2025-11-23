@@ -12,13 +12,25 @@ let col = 0;
 moves.push(board[row][col]); // A
 
 // Define movement functions
-function moveRight() {}
+function moveRight() {
+	if (col < 2) col++;
+	moveDown.push(board[row][col]);
+}
 
-function moveLeft() {}
+function moveLeft() {
+	if (col > 2) col--;
+	moves.push(board[row][col]);
+}
 
-function moveUp() {}
+function moveUp() {
+	if ( col > 0) row--;
+	moves.push(board[row][col]);
+}
 
-function moveDown() {}
+function moveDown() {
+	if ( row < 2) row++;
+	moves.push(board[row][col]);
+}
 
 // Call the movement functions
 moveRight(); // Move from A to B
