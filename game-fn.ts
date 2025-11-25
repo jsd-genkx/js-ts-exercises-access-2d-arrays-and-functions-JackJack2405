@@ -3,6 +3,8 @@ const board = [
 	["D", "E", "F"],
 	["G", "H", "I"],
 ];
+//console.log(board.length);
+//console.log(board[0].length);
 
 const moves = [];
 
@@ -14,7 +16,7 @@ moves.push(board[row][col]); // A
 // Define movement functions
 function moveRight() {
 	if (col < 2) col++;
-	moveDown.push(board[row][col]);
+	moves.push(board[row][col);
 }
 
 function moveLeft() {
@@ -40,3 +42,5 @@ moveLeft(); // Move from F to E
 
 console.log("Path:", moves.join(" → "));
 console.log("Total Moves (Start from 'A'):", moves.length - 1);
+
+
